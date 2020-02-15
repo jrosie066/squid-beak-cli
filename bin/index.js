@@ -3,9 +3,8 @@ const program = require('commander');
 const chalk = require('chalk');
 const path = require('path');
 const pathExists = require('path-exists');
-const testQuestions = require('../lib/index');
-const generateProject = require('../lib/commands/generateProject');
-
+const generateProject = require('../lib/commands/generate-project');
+const initiatePage = require('../lib/commands/generate-page');
 /**
  * List of potential commands
  * - generate page
@@ -16,18 +15,18 @@ const generateProject = require('../lib/commands/generateProject');
 program
   .command('page [name]') // sub-command name
   .description('Generate React Page') // command description
-  .option('-nw, --no-wrapper', 'Do not use wrapper pattern with page')
+  // .option('-nw, --no-wrapper', 'Do not use wrapper pattern with page')
   .option('-m, --material', 'Do not use wrapper pattern with page')
   // function to execute when command is uses
   .action(function (name, args) {
     console.log(args.wrapper);
-    const useWrapper = args.wrapper;
+    // const useWrapper = args.wrapper;
     const useMaterial = args.material;
     const options = {
-      useWrapper, useMaterial
+      useMaterial,
+      // useWrapper,
     };
-    testQuestions();
-    // initiatePage(name, options);
+    initiatePage(name, options);
   });
 
 program
