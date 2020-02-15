@@ -1,0 +1,75 @@
+{
+  "extends": [
+    "alloy",
+    "alloy/react",
+    "alloy/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "mocha": true,
+    "node": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.dev.config.js"
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "no-unused-expressions": "error",
+    "eol-last": "error",
+    "interface-over-type-literal": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "semi": "error",
+    "max-params": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "import/newline-after-import": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ]
+  }
+}

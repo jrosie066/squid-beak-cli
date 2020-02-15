@@ -1,0 +1,17 @@
+**/node_modules/*
+**/dist/*
+
+# CONFIGS
+config/*
+
+# SCRIPTS
+# scripts/builders/*
+
+# WEBPACK
+webpack.common.config.js
+webpack.dev.config.js
+webpack.production.config.js
+webpack.static.config.js
+
+# JEST
+jest.config.js
