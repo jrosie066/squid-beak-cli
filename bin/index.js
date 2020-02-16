@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 const program = require('commander');
-const chalk = require('chalk');
 const path = require('path');
 const pathExists = require('path-exists');
 const generateProject = require('../lib/commands/generate-project');
 const initiatePage = require('../lib/commands/generate-page');
+const logger = require('../lib/util/logger');
+
 /**
  * List of potential commands
  * - generate page
@@ -33,13 +34,13 @@ program
   .command('generate <projectName>')
   .alias('g')
   .description('Create new React Project')
-  .action((projectName) => {
+  .action(async (projectName) => {
     // check if project folder already exists
     if (pathExists.sync(path.resolve(process.cwd(), projectName))) {
-      console.log(chalk.yellow.bold(`Error! Directory ${projectName} already exist.`));
+      console.log(logger.error(`Error! Directory ${projectName} already exist.`));
       process.exit(1);
     } else {
-      generateProject(projectName);
+      await generateProject(projectName);
     }
   });
 program.parse(process.argv);
