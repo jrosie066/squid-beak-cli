@@ -44,6 +44,7 @@
   },
   "rules": {
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-empty-interface": "off",
     "comma-dangle": [
       "error",
       {
@@ -54,22 +55,21 @@
         "functions": "never"
       }
     ],
-    "no-unused-expressions": "error",
     "eol-last": "error",
-    "interface-over-type-literal": "off",
-    "@typescript-eslint/no-empty-interface": "off",
-    "semi": "error",
-    "max-params": "off",
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "no-unused-expressions": "error",
     "import/newline-after-import": "error",
+    "interface-over-type-literal": "off",
     "max-len": [
       "error",
       {
         "code": 100
       }
-    ]
+    ],
+    "max-params": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": "error"
   }
 }
