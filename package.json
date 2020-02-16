@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
     "cp": "^0.2.0",
