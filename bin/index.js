@@ -5,7 +5,7 @@ const pathExists = require('path-exists');
 const generateProject = require('../lib/commands/generate-project');
 const initiatePage = require('../lib/commands/generate-page');
 const logger = require('../lib/util/logger');
-
+const createComponent = require('../lib/commands/generate-component');
 /**
  * List of potential commands
  * - generate page
@@ -27,9 +27,30 @@ program
       useMaterial,
       // useWrapper,
     };
-    initiatePage(name, options);
+    initiatePage(name, options)
+      .then(msg => {
+        console.log(msg);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   });
 
+// generate component
+program
+  .command('component [name]')
+  .alias('c')
+  .description('Generate React Componenet') // command description
+  // function to execute when command is uses
+  .action((name) => {
+    createComponent(name)
+      .then((msg) => {
+        console.log(msg);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 program
   .command('generate <projectName>')
   .alias('g')
