@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582377690563" clover="3.2.0">
-  <project timestamp="1582377690563" name="All files">
-    <metrics statements="180" coveredstatements="159" conditionals="22" coveredconditionals="17" methods="31" coveredmethods="18" elements="233" coveredelements="194" complexity="0" loc="180" ncloc="180" packages="4" files="11" classes="11"/>
+<coverage generated="1582399944861" clover="3.2.0">
+  <project timestamp="1582399944862" name="All files">
+    <metrics statements="180" coveredstatements="167" conditionals="22" coveredconditionals="22" methods="31" coveredmethods="21" elements="233" coveredelements="210" complexity="0" loc="180" ncloc="180" packages="4" files="11" classes="11"/>
     <package name="commands">
       <metrics statements="54" coveredstatements="53" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
       <file name="generate-component.js" path="/Users/jamie/Projects/squid-beak-cli/lib/commands/generate-component.js">
@@ -69,7 +69,7 @@
       </file>
     </package>
     <package name="file-creators">
-      <metrics statements="58" coveredstatements="44" conditionals="8" coveredconditionals="3" methods="13" coveredmethods="4"/>
+      <metrics statements="58" coveredstatements="52" conditionals="8" coveredconditionals="8" methods="13" coveredmethods="7"/>
       <file name="file-templates.js" path="/Users/jamie/Projects/squid-beak-cli/lib/file-creators/file-templates.js">
         <metrics statements="13" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="4" type="stmt"/>
@@ -114,27 +114,27 @@
         <line num="49" count="2" type="stmt"/>
       </file>
       <file name="shared-files.js" path="/Users/jamie/Projects/squid-beak-cli/lib/file-creators/shared-files.js">
-        <metrics statements="21" coveredstatements="13" conditionals="6" coveredconditionals="1" methods="4" coveredmethods="1"/>
+        <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
         <line num="1" count="4" type="stmt"/>
         <line num="2" count="4" type="stmt"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="22" count="4" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
         <line num="31" count="4" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
         <line num="41" count="4" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
         <line num="51" count="4" type="stmt"/>
       </file>
     </package>
