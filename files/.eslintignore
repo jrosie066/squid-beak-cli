@@ -4,9 +4,6 @@
 # CONFIGS
 config/*
 
-# SCRIPTS
-# scripts/builders/*
-
 # WEBPACK
 webpack.common.config.js
 webpack.dev.config.js

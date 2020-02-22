@@ -42,8 +42,13 @@ program
   .alias('c')
   .description('Generate React Componenet') // command description
   // function to execute when command is uses
-  .action((name) => {
-    createComponent(name)
+  .option('-m, --material', 'Use Material UI styles', false)
+  .action((name, args) => {
+    console.log(args.material);
+    const options = {
+      useMaterial: args.material,
+    };
+    createComponent(name, options)
       .then((msg) => {
         console.log(msg);
       })
