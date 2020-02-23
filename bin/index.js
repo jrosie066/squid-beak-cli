@@ -43,11 +43,13 @@ program
   .description('Generate React Componenet') // command description
   // function to execute when command is uses
   .option('-m, --material', 'Use Material UI styles', false)
+  .option('-n, --no-enhancer', 'Do not use enhancer pattern with component', false)
   .action((name, args) => {
-    console.log(args.material);
     const options = {
       useMaterial: args.material,
+      useEnhancer: args.enhancer,
     };
+    console.log(options);
     createComponent(name, options)
       .then((msg) => {
         console.log(msg);
