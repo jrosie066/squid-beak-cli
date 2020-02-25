@@ -59,8 +59,8 @@ program
       });
   });
 program
-  .command('generate <projectName>')
-  .alias('g')
+  .command('init <projectName>')
+  .alias('i')
   .description('Create new React Project')
   .action(async (projectName) => {
     // check if project folder already exists
