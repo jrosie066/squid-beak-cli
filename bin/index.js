@@ -13,18 +13,31 @@ const createComponent = require('../lib/commands/generate-component');
  * - create project
  * 
  */
+let cmdValue;
+let nameValue;
+program
+  .arguments('<cmd> [name]')
+  .action((cmd, name) => {
+    console.log(cmd);
+    cmdValue = cmd;
+    nameValue = name;
+    console.log(cmdValue);
+    if ( typeof cmdValue === 'undefined'){
+      console.log(logger.error('no command given!'));
+      process.exit(1);
+    }
+  });
+
+
 program
   .command('page [name]') // sub-command name
   .description('Generate React Page') // command description
   // .option('-nw, --no-wrapper', 'Do not use wrapper pattern with page')
-  .option('-m, --material', 'Do not use wrapper pattern with page')
+  .option('-m, --material', 'Use material-ui styling on page')
   // function to execute when command is uses
   .action(function (name, args) {
-    console.log(args.wrapper);
-    // const useWrapper = args.wrapper;
-    const useMaterial = args.material;
     const options = {
-      useMaterial,
+      useMaterial: args.material,
       // useWrapper,
     };
     initiatePage(name, options)
@@ -59,7 +72,7 @@ program
       });
   });
 program
-  .command('init <projectName>')
+  .command('init [projectName]')
   .alias('i')
   .description('Create new React Project')
   .action(async (projectName) => {
