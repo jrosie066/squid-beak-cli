@@ -6,6 +6,7 @@ const generateProject = require('../lib/commands/generate-project');
 const initiatePage = require('../lib/commands/generate-page');
 const logger = require('../lib/util/logger');
 const createComponent = require('../lib/commands/generate-component');
+const logSymbols = require('log-symbols');
 /**
  * List of potential commands
  * - generate page
@@ -13,32 +14,24 @@ const createComponent = require('../lib/commands/generate-component');
  * - create project
  * 
  */
-let cmdValue;
-let nameValue;
-program
-  .arguments('<cmd> [name]')
-  .action((cmd, name) => {
-    console.log(cmd);
-    cmdValue = cmd;
-    nameValue = name;
-    console.log(cmdValue);
-    if ( typeof cmdValue === 'undefined'){
-      console.log(logger.error('no command given!'));
-      process.exit(1);
-    }
-  });
-
+// error on unknown commands
+program.on('command:*', function () {
+  const errorMsg = `${logSymbols.error} Invalid command: ${program.args.join(' ')}`;
+  logger.error(errorMsg);
+  process.exit(1);
+});
 
 program
   .command('page [name]') // sub-command name
   .description('Generate React Page') // command description
-  // .option('-nw, --no-wrapper', 'Do not use wrapper pattern with page')
+  .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
+  .option('-e, --no-enhancer', 'Do not use enhancer pattern')
   .option('-m, --material', 'Use material-ui styling on page')
   // function to execute when command is uses
   .action(function (name, args) {
     const options = {
       useMaterial: args.material,
-      // useWrapper,
+      useWrapper: args.wrapper,
     };
     initiatePage(name, options)
       .then(msg => {
@@ -65,10 +58,10 @@ program
     console.log(options);
     createComponent(name, options)
       .then((msg) => {
-        console.log(msg);
+        logger.success(msg);
       })
       .catch((err) => {
-        console.log(err);
+        logger.error(err);
       });
   });
 program
@@ -78,7 +71,7 @@ program
   .action(async (projectName) => {
     // check if project folder already exists
     if (pathExists.sync(path.resolve(process.cwd(), projectName))) {
-      console.log(logger.error(`Error! Directory ${projectName} already exist.`));
+      logger.error(`Error! Directory ${projectName} already exist.`);
       process.exit(1);
     } else {
       await generateProject(projectName);
