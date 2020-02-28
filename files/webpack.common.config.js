@@ -29,21 +29,16 @@ const config = () => {
         },
         {
           test: /\.ts(x?)$/,
-          loader: 'awesome-typescript-loader',
+          use: [
+            {
+              loader: 'babel-loader',
+            },
+            {
+              loader: 'ts-loader'
+            }
+          ],
           exclude: /node_modules/,
         },
-        // {
-        //   test: /\.ts(x?)$/,
-        //   use: [
-        //     {
-        //       loader: 'babel-loader',
-        //     },
-        //     {
-        //       loader: 'ts-loader'
-        //     }
-        //   ],
-        //   exclude: /node_modules/,
-        // },
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
