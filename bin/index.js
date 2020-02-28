@@ -21,6 +21,9 @@ program.on('command:*', function () {
   process.exit(1);
 });
 
+/**
+ * Generate Page
+ */
 program
   .command('page [name]') // sub-command name
   .description('Generate React Page') // command description
@@ -35,10 +38,10 @@ program
     };
     initiatePage(name, options)
       .then(msg => {
-        console.log(msg);
+        logger.info(msg);
       })
       .catch(err => {
-        console.log(err);
+        logger.error(err);
       });
   });
 
@@ -58,7 +61,7 @@ program
     console.log(options);
     createComponent(name, options)
       .then((msg) => {
-        logger.success(msg);
+        logger.info(msg);
       })
       .catch((err) => {
         logger.error(err);
