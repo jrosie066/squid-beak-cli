@@ -7,6 +7,8 @@ const initiatePage = require('../lib/commands/generate-page');
 const logger = require('../lib/util/logger');
 const createComponent = require('../lib/commands/generate-component');
 const logSymbols = require('log-symbols');
+
+
 /**
  * List of potential commands
  * - generate page
@@ -28,7 +30,7 @@ program
   .command('page [name]') // sub-command name
   .description('Generate React Page') // command description
   .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
-  .option('-e, --no-enhancer', 'Do not use enhancer pattern', )
+  .option('-e, --no-enhancer', 'Do not use enhancer pattern')
   .option('-m, --material', 'Use material-ui styling on page', false)
   // function to execute when command is uses
   .action(function (name, args) {
@@ -81,4 +83,11 @@ program
       await generateProject(projectName);
     }
   });
+
+// Leaving in for future testing needs
+// program
+//   .command('test')
+//   .action(() => {
+
+//   });
 program.parse(process.argv);
