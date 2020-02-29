@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582977187629" clover="3.2.0">
-  <project timestamp="1582977187629" name="All files">
-    <metrics statements="278" coveredstatements="239" conditionals="54" coveredconditionals="39" methods="56" coveredmethods="33" elements="388" coveredelements="311" complexity="0" loc="278" ncloc="278" packages="5" files="14" classes="14"/>
+<coverage generated="1583017838973" clover="3.2.0">
+  <project timestamp="1583017838973" name="All files">
+    <metrics statements="283" coveredstatements="257" conditionals="54" coveredconditionals="41" methods="51" coveredmethods="36" elements="388" coveredelements="334" complexity="0" loc="283" ncloc="283" packages="5" files="14" classes="14"/>
     <package name="commands">
-      <metrics statements="65" coveredstatements="64" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
+      <metrics statements="66" coveredstatements="65" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
       <file name="generate-component.js" path="/Users/jamie/Projects/squid-beak-cli/lib/commands/generate-component.js">
         <metrics statements="25" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -56,7 +56,7 @@
         <line num="39" count="1" type="stmt"/>
       </file>
       <file name="generate-project.js" path="/Users/jamie/Projects/squid-beak-cli/lib/commands/generate-project.js">
-        <metrics statements="20" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="21" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -70,13 +70,14 @@
         <line num="31" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
       </file>
     </package>
     <package name="file-creators">
@@ -227,36 +228,38 @@
       </file>
     </package>
     <package name="initializers">
-      <metrics statements="53" coveredstatements="37" conditionals="8" coveredconditionals="6" methods="15" coveredmethods="6"/>
+      <metrics statements="55" coveredstatements="52" conditionals="8" coveredconditionals="8" methods="10" coveredmethods="9"/>
       <file name="add-files.js" path="/Users/jamie/Projects/squid-beak-cli/lib/initializers/add-files.js">
-        <metrics statements="27" coveredstatements="11" conditionals="2" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <metrics statements="29" coveredstatements="26" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="80" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="58" count="3" type="stmt"/>
+        <line num="59" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="66" count="36" type="stmt"/>
+        <line num="67" count="36" type="stmt"/>
+        <line num="69" count="12" type="stmt"/>
+        <line num="72" count="3" type="stmt"/>
+        <line num="94" count="3" type="stmt"/>
+        <line num="95" count="3" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
       </file>
       <file name="project-structure.js" path="/Users/jamie/Projects/squid-beak-cli/lib/initializers/project-structure.js">
         <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
@@ -289,7 +292,7 @@
       </file>
     </package>
     <package name="util">
-      <metrics statements="34" coveredstatements="33" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="8"/>
+      <metrics statements="36" coveredstatements="35" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="8"/>
       <file name="cmd-async.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/cmd-async.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -319,22 +322,24 @@
         <line num="4" count="8" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
         <line num="6" count="8" type="stmt"/>
-        <line num="7" count="18" type="stmt"/>
+        <line num="7" count="19" type="stmt"/>
         <line num="8" count="8" type="stmt"/>
         <line num="9" count="8" type="stmt"/>
-        <line num="10" count="18" type="stmt"/>
+        <line num="10" count="19" type="stmt"/>
         <line num="12" count="8" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="16" count="8" type="stmt"/>
         <line num="25" count="8" type="stmt"/>
       </file>
       <file name="promise-fs.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/promise-fs.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
       </file>
     </package>
   </project>
