@@ -14,10 +14,6 @@ export const createRoutes = () => {
             path: '/',
           },
           // add other pages in this array
-          {
-            component: '', /* Add your base path page here*/
-            path: '/',
-          },
         ].map((settings, index) => (
           < Route exact key={`Route-${index}`} {...settings} />
         ))

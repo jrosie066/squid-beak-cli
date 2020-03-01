@@ -7,7 +7,7 @@ const initiatePage = require('../lib/commands/generate-page');
 const logger = require('../lib/util/logger');
 const createComponent = require('../lib/commands/generate-component');
 const logSymbols = require('log-symbols');
-
+const updater = require('../lib/file-creators/update');
 
 /**
  * List of potential commands
@@ -85,9 +85,9 @@ program
   });
 
 // Leaving in for future testing needs
-// program
-//   .command('test')
-//   .action(() => {
-
-//   });
+program
+  .command('test')
+  .action(() => {
+    updater.updateRoutes('Test');
+  });
 program.parse(process.argv);
