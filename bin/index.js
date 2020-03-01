@@ -2,12 +2,12 @@
 const program = require('commander');
 const path = require('path');
 const pathExists = require('path-exists');
-const generateProject = require('../lib/commands/generate-project');
-const initiatePage = require('../lib/commands/generate-page');
+const generateProject = require('../lib/project/generate-project');
+const initiatePage = require('../lib/page/generate-page');
 const logger = require('../lib/util/logger');
-const createComponent = require('../lib/commands/generate-component');
+const createComponent = require('../lib/component/generate-component');
 const logSymbols = require('log-symbols');
-const updater = require('../lib/file-creators/update');
+const updater = require('../lib/shared/update');
 
 /**
  * List of potential commands
