@@ -1,0 +1,82 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 10,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "mocha": true,
+    "node": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.dev.config.js"
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": "warn",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-extra-semi": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "eol-last": "error",
+    "import/newline-after-import": "error",
+    "import/prefer-default-export": "off",
+    "interface-over-type-literal": "off",
+    "max-params": "off",
+    "no-unused-expressions": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "exceptions": [
+          "WrappedComponent"
+        ]
+      }
+    ],
+    "semi": "error"
+  }
+}
