@@ -27,13 +27,28 @@ Globally install
 
 # Usage
 
-## Methods
+```
+$ squid-beak [cmd] <params>
+```
+## Commands
 
 ### component [name]
 ```
 $ squid-beak component my-awesome-component
 ```
+This will create a new component called MyAwesomeComponent with the following folder structure
+under the "components" folder
 
+```
+- __components__
+   - __Test__
+     - [Test.enhancer.ts](Test/Test.enhancer.ts)
+     - [Test.styles.ts](Test/Test.styles.ts)
+     - [Test.tsx](Test/Test.tsx)
+     - [index.ts](Test/index.ts)
+     - __test__
+       - [Test.stories.js](Test/test/Test.stories.js)
+```
 ### page [name]
 
 ### init [projectName]
