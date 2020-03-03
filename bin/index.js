@@ -27,7 +27,7 @@ program.on('command:*', function () {
  * Generate Page
  */
 program
-  .command('page [name]') // sub-command name
+  .command('page <name>') // sub-command name
   .description('Generate React Page') // command description
   .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
   .option('-e, --no-enhancer', 'Do not use enhancer pattern')
@@ -50,7 +50,7 @@ program
 
 // generate component
 program
-  .command('component [name]')
+  .command('component <name>')
   .alias('c')
   .description('Generate React Componenet') // command description
   // function to execute when command is uses
@@ -73,7 +73,7 @@ program
       });
   });
 program
-  .command('init [projectName]')
+  .command('project <projectName>')
   .alias('i')
   .description('Create new React Project')
   .action(async (projectName) => {

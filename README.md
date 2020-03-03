@@ -17,7 +17,7 @@ Clone project from github
 
 `git clone https://github.com/jrosie066/squid-beak-cli.git`
  
-Navigatee inside the cloned project
+Navigate inside the cloned project
 
 `cd squid-beak-cli`
 
@@ -27,28 +27,34 @@ Globally install
 
 # Usage
 
-```
+```sh
 $ squid-beak [cmd] <params>
 ```
 ## Commands
 
+* [component](#component)
+* [page](#page)
+* [project](project)
+
 ### component [name]
-```
+```sh
 $ squid-beak component my-awesome-component
 ```
 This will create a new component called MyAwesomeComponent with the following folder structure
 under the "components" folder
 
 ```
-- __components__
-   - __Test__
-     - [Test.enhancer.ts](Test/Test.enhancer.ts)
-     - [Test.styles.ts](Test/Test.styles.ts)
-     - [Test.tsx](Test/Test.tsx)
-     - [index.ts](Test/index.ts)
-     - __test__
-       - [Test.stories.js](Test/test/Test.stories.js)
+├── components
+│   └── MyAwesomeComponent
+│       ├── MyAwesomeComponent.enhancer.ts
+│       ├── MyAwesomeComponent.styles.ts
+│       ├── MyAwesomeComponent.tsx
+│       ├── index.ts
+│       └── test
+│           └── MyAwesomeComponent.stories.js
 ```
+
+
 ### page [name]
 
 ### init [projectName]
