@@ -25,10 +25,14 @@ Globally install
 
 `npm i -g ./`
 
+# Usage
 
 ## Methods
 
 ### component [name]
+```
+$ squid-beak component my-awesome-component
+```
 
 ### page [name]
 
