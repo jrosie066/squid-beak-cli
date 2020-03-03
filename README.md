@@ -14,16 +14,25 @@ An easy way to generate new React project, React components and pages through th
 Right now, this is not in npm so you will need to clone the package and install globally from there
 
 Clone project from github
+
 `git clone https://github.com/jrosie066/squid-beak-cli.git`
  
 Navigatee inside the cloned project
+
 `cd squid-beak-cli`
 
 Globally install
+
 `npm i -g ./`
 
 
-End with an example of getting some data out of the system or using it for a little demo
+## Methods
+
+### component [name]
+
+### page [name]
+
+### init [projectName]
 
 ## Running the tests
 
