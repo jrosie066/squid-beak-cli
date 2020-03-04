@@ -61,12 +61,17 @@ under the "components" folder
 **Options**
 
 `--material` or `-m` - use material-ui styles with this component
+
 default: false
 
 `--no-storybook` or `-s` - don't add the test folder with the component's stories file
+
 default: false
 
 `--no-enhancer` or `-e` - don't use the "enhancer pattern" with this component
+
+
+default: false
 
 
 ### page <name>
