@@ -28,6 +28,7 @@ program.on('command:*', function () {
  */
 program
   .command('page <name>') // sub-command name
+  .alias('p')
   .description('Generate React Page') // command description
   .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
   .option('-e, --no-enhancer', 'Do not use enhancer pattern')

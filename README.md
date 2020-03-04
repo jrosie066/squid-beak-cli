@@ -77,14 +77,32 @@ default: false
 
 ### page [name]
 ```sh
-$ squid-beak page my-awesome-component
+$ squid-beak page my-awesome-page
 ```
 or can use alias
 
 ```sh
-$ squid-beak p my-awesome-component
+$ squid-beak p my-awesome-page
 ```
+This will create a new page called MyAwesomePage with the following folder structure under the "pages" folder
+
+```
+├── pages
+│   ├── MyAwesomePage
+│   │   ├── component
+│   │   │   ├── MyAwesomePage.enhancer.ts
+│   │   │   ├── MyAwesomePage.styles.ts
+│   │   │   ├── MyAwesomePage.tsx
+│   │   │   └── index.ts
+│   │   ├── index.ts
+│   │   └── wrapper
+│   │       └── MyAwesomePageWrapper.tsx
+```
+The component folder holds the presentational page component, styles, HOC enhancer file.
+
+The wrapper folder holds the a higher order component for the 
 **Options**
+
 `--material` or `-m` - use material-ui styles with this component
 
 default: false
@@ -99,6 +117,42 @@ default: false
 
 
 ### project [name]
+
+
+## Enhancer Pattern
+
+Instead of piling on the higher order components for a component on to the same file, this pattern has an extra file (the enhancer) that combines together the HOCs with the help of thee redux `compose` function into one function.
+
+
+```js
+// .enhancer.js
+
+import { memo, FunctionComponent } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'redux';
+import { WrapperOne } from '../wrapper/WrapperOne';
+import { WrapperTwo } from '../wrapper/WrappereTwo'
+import { Props } from './MyComponent';
+
+const enhance = compose<FunctionComponent<Props>>(
+  memo,
+  withStyles,
+  WrapperOne,
+  WrapperTwo
+);
+export { enhance };
+
+```
+So then when you export the component, you wrap it with the new enhancer function and all of the HOCs are applied. Keeping the component file a bit cleaner and separating out concerns into a new file.
+
+```js
+// index.js
+import { MyComponent } from './MyComponent';
+import { enhance } from './MyComponent.enhancer';
+
+export default enhance(MyComponent);
+
+```
 
 ## Versioning
 
