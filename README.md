@@ -100,7 +100,8 @@ This will create a new page called MyAwesomePage with the following folder struc
 ```
 The component folder holds the presentational page component, styles, HOC enhancer file.
 
-The wrapper folder holds the a higher order component for the 
+The wrapper folder holds the a higher order component for the... 
+
 **Options**
 
 `--material` or `-m` - use material-ui styles with this component
@@ -119,7 +120,7 @@ default: false
 ### project [name]
 
 
-## Enhancer Pattern
+## Enhancer
 
 Instead of piling on the higher order components for a component on to the same file, this pattern has an extra file (the enhancer) that combines together the HOCs with the help of thee redux `compose` function into one function.
 
