@@ -40,6 +40,11 @@ $ squid-beak [cmd] <params>
 ```sh
 $ squid-beak component my-awesome-component
 ```
+or can use alias
+
+```sh
+$ squid-beak c my-awesome-component
+```
 This will create a new component called MyAwesomeComponent with the following folder structure
 under the "components" folder
 
@@ -53,11 +58,20 @@ under the "components" folder
 │       └── test
 │           └── MyAwesomeComponent.stories.js
 ```
+**Options**
+
+`--material` or `-m` - use material-ui styles with this component
+default: false
+
+`--no-storybook` or `-s` - don't add the test folder with the component's stories file
+default: false
+
+`--no-enhancer` or `-e` - don't use the "enhancer pattern" with this component
 
 
-### page [name]
+### page <name>
 
-### init [projectName]
+### project <projectName>
 
 ## Running the tests
 
