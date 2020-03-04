@@ -56,7 +56,7 @@ program
   // function to execute when command is uses
   .option('-m, --material', 'Use Material UI styles', false)
   .option('-s, --no-storybook', 'Do no use storybook test', false)
-  .option('-n, --no-enhancer', 'Do not use enhancer pattern with component', false)
+  .option('-e, --no-enhancer', 'Do not use enhancer pattern with component', false)
   .action((name, args) => {
     const options = {
       useMaterial: args.material,

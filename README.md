@@ -64,53 +64,41 @@ under the "components" folder
 
 default: false
 
+
 `--no-storybook` or `-s` - don't add the test folder with the component's stories file
 
 default: false
 
-`--no-enhancer` or `-e` - don't use the "enhancer pattern" with this component
 
+`--no-enhancer` or `-e` - don't use the [enhancer pattern](#enhancer) with this component
 
 default: false
 
 
-### page <name>
-
-### project <projectName>
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+### page [name]
+```sh
+$ squid-beak page my-awesome-component
 ```
-Give an example
+or can use alias
+
+```sh
+$ squid-beak p my-awesome-component
 ```
+**Options**
+`--material` or `-m` - use material-ui styles with this component
 
-### And coding style tests
+default: false
 
-Explain what these tests test and why
+`--no-enhancer` or `-e` - don't use [enhancer pattern](#enhancer) with page
 
-```
-Give an example
-```
+default: false
 
-## Deployment
+`--no-wrapper` or `-w` - don't use the higher order component/"wrapper" for the page
 
-Add additional notes about how to deploy this on a live system
+default: false
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+### project [name]
 
 ## Versioning
 
@@ -124,30 +112,4 @@ Jamie Artin
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-## Generate Components with enhancer pattern
-
-`npm run generate-component <name>`
-** if name is more than one word use dash notation, this will camel case the component file and the folder name
-i.e. `npm run generate-component test-name`
-
-
-
-## TODO:
-
-* ~redux setup~
-* redux test
-* production webpack
-* verify prod build
-* static webpack
-
-### Generators
-* fs tests
-
-### Components/Pages
-* add comments to generator
-* create sample page
-* create sample component
