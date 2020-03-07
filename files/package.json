@@ -6,9 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --color --config webpack.dev.config.js",
     "test": "npx jest src",
-    "generate-component": "node ./scripts/builders/component/index.js",
-    "generate-page": "node ./scripts/builders/page/index.js",
-    "generator:test": "npx jest scripts --coverage",
+    "build": "node ./scripts/index.js",
+    "build:analyze": "cross-env NODE_ANALYZE=true node ./scripts/index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

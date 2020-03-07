@@ -9,8 +9,10 @@ An easy way to generate new React project, React components and pages through th
 | redux       | 4.0.4   |
 | material-ui | 4.6.1   |
 | webpack     | 4.41.2  |
-| storybook   | 
-### Installing
+| storybook   | 5.3.12  |
+
+
+# Installing
 Right now, this is not in npm so you will need to clone the package and install globally from there
 
 Clone project from github
@@ -36,7 +38,7 @@ $ squid-beak [cmd] <params>
 * [page](#page)
 * [project](project)
 
-### component [name]
+### component
 ```sh
 $ squid-beak component my-awesome-component
 ```
@@ -75,7 +77,7 @@ default: false
 default: false
 
 
-### page [name]
+### page
 ```sh
 $ squid-beak page my-awesome-page
 ```
@@ -117,10 +119,12 @@ default: false
 default: false
 
 
-### project [name]
+### project
+```sh
+$ squid-beak project my-awesome-component
+```
 
-
-## Enhancer
+# Enhancer
 
 Instead of piling on the higher order components for a component on to the same file, this pattern has an extra file (the enhancer) that combines together the HOCs with the help of thee redux `compose` function into one function.
 

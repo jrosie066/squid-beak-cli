@@ -87,10 +87,29 @@ program
     }
   });
 
+const log = () => {
+  const id = setInterval(() => {
+    console.log('..');
+    console.group();
+    console.log('..');
+    console.group();
+    console.log('..');
+    console.groupEnd();
+    setTimeout(() => {
+      console.log('..');
+      console.groupEnd();
+      console.log('..');
+      console.groupEnd();
+    }, 100);
+  }, 500);
+  setTimeout(() => {
+    clearInterval(id);
+  }, 2000);
+};
 // Leaving in for future testing needs
 program
   .command('test')
   .action(() => {
-    updater.updateRoutes('Test');
+    log();
   });
 program.parse(process.argv);
