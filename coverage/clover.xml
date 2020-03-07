@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583581051859" clover="3.2.0">
-  <project timestamp="1583581051860" name="All files">
-    <metrics statements="383" coveredstatements="332" conditionals="68" coveredconditionals="65" methods="66" coveredmethods="47" elements="517" coveredelements="444" complexity="0" loc="383" ncloc="383" packages="5" files="16" classes="16"/>
+<coverage generated="1583584691124" clover="3.2.0">
+  <project timestamp="1583584691124" name="All files">
+    <metrics statements="386" coveredstatements="335" conditionals="68" coveredconditionals="65" methods="67" coveredmethods="48" elements="521" coveredelements="448" complexity="0" loc="386" ncloc="386" packages="5" files="16" classes="16"/>
     <package name="component">
-      <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="generate-component.js" path="/Users/jamie/Projects/squid-beak-cli/lib/component/generate-component.js">
-        <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -19,19 +19,18 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
       </file>
     </package>
     <package name="page">
@@ -128,9 +127,9 @@
       </file>
     </package>
     <package name="project">
-      <metrics statements="137" coveredstatements="103" conditionals="12" coveredconditionals="12" methods="20" coveredmethods="15"/>
+      <metrics statements="141" coveredstatements="107" conditionals="12" coveredconditionals="12" methods="21" coveredmethods="16"/>
       <file name="add-files-to-project.js" path="/Users/jamie/Projects/squid-beak-cli/lib/project/add-files-to-project.js">
-        <metrics statements="43" coveredstatements="40" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="8"/>
+        <metrics statements="47" coveredstatements="44" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="9"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -144,19 +143,17 @@
         <line num="41" count="2" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
-        <line num="59" count="2" type="stmt"/>
-        <line num="60" count="2" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
-        <line num="62" count="2" type="stmt"/>
-        <line num="63" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="69" count="2" type="stmt"/>
-        <line num="70" count="22" type="stmt"/>
-        <line num="72" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
         <line num="74" count="2" type="stmt"/>
-        <line num="75" count="2" type="stmt"/>
+        <line num="75" count="22" type="stmt"/>
         <line num="77" count="2" type="stmt"/>
         <line num="79" count="2" type="stmt"/>
         <line num="80" count="2" type="stmt"/>
@@ -167,13 +164,19 @@
         <line num="89" count="2" type="stmt"/>
         <line num="90" count="2" type="stmt"/>
         <line num="92" count="2" type="stmt"/>
-        <line num="93" count="2" type="stmt"/>
         <line num="94" count="2" type="stmt"/>
-        <line num="96" count="2" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
         <line num="97" count="2" type="stmt"/>
-        <line num="99" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
+        <line num="98" count="2" type="stmt"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="101" count="4" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
         <line num="104" count="2" type="stmt"/>
+        <line num="105" count="2" type="stmt"/>
+        <line num="106" count="2" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="113" count="2" type="stmt"/>
       </file>
       <file name="generate-project.js" path="/Users/jamie/Projects/squid-beak-cli/lib/project/generate-project.js">
         <metrics statements="29" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>

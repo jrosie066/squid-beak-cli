@@ -8,7 +8,7 @@ const logger = require('../lib/util/logger');
 const createComponent = require('../lib/component/generate-component');
 const logSymbols = require('log-symbols');
 const updater = require('../lib/shared/update');
-
+const createStorybookTest = require('../lib/storybook/generate-storybook');
 /**
  * List of potential commands
  * - generate page
@@ -46,6 +46,7 @@ program
       })
       .catch(err => {
         logger.error(err);
+        process.exit(1);
       });
   });
 
@@ -64,7 +65,6 @@ program
       useEnhancer: args.enhancer,
       useStorybook: args.storybook
     };
-    console.log(options);
     createComponent(name, options)
       .then((msg) => {
         logger.info(msg);
@@ -80,11 +80,18 @@ program
   .action(async (projectName) => {
     // check if project folder already exists
     if (pathExists.sync(path.resolve(process.cwd(), projectName))) {
-      logger.error(`Error! Directory ${projectName} already exist.`);
+      logger.error(`Error! Directory ${projectName} already exists!!! 🤨\n\n`);
       process.exit(1);
     } else {
       await generateProject(projectName);
     }
+  });
+
+program
+  .command('sb <name>')
+  .description('Create new React Component Storybook Test')
+  .action(async (name) => {
+    createStorybookTest(name);
   });
 
 const log = () => {
