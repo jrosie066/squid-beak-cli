@@ -123,6 +123,64 @@ default: false
 ```sh
 $ squid-beak project my-awesome-component
 ```
+**Options**
+The generate project command will prompt you with a serious of questions to select the options to use with the project setup.
+1. Pick a Component Library
+  * Material-UI
+  * Ant-Design
+  * None
+
+2. Eslint Style Guide?
+  * AirBnb
+  * Alloy
+  * Google
+
+3. Do you want to use redux? y/n
+
+4. Do you want to set up Storybook? y/n
+
+After your selection the folder structure will be generated and configuration and sample files will be added.
+Git will be initiated and it will install all appropriate dependencies.
+
+Here is a sample of the folder structure generated with storybook and redux
+
+```
+├── .storybook
+│   └── main.js
+├── config
+│   ├── jest
+│   │   ├── assetTransformer.js
+│   │   ├── testSetup.js
+│   │   └── testShim.js
+├── scripts
+│   ├── buildApp.js
+│   └── index.js
+├── src
+│   ├── assets
+│   │   ├── images
+│   │   └── styles
+│   ├── build
+│   │   └── index.html
+│   ├── components
+│   ├── constants
+│   │   └── route-paths.ts
+│   ├── containers
+│   │   └── Root.tsx
+│   ├── index.tsx
+│   ├── pages
+│   │   └── routes.tsx
+│   ├── redux
+│   │   └── reducers
+│   │       └── sample
+│   │           └── tests
+│   ├── serviceWorker.js
+│   └── util
+├── tsconfig.json
+├── webpack.common.config.js
+├── webpack.dev.config.js
+├── webpack.production.config.js
+└── webpack.static.config.js
+```
 
 # Enhancer
 
