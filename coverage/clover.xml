@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583665569122" clover="3.2.0">
-  <project timestamp="1583665569123" name="All files">
-    <metrics statements="378" coveredstatements="350" conditionals="70" coveredconditionals="66" methods="65" coveredmethods="45" elements="513" coveredelements="461" complexity="0" loc="378" ncloc="378" packages="5" files="16" classes="16"/>
+<coverage generated="1583743496899" clover="3.2.0">
+  <project timestamp="1583743496899" name="All files">
+    <metrics statements="381" coveredstatements="351" conditionals="70" coveredconditionals="66" methods="68" coveredmethods="46" elements="519" coveredelements="463" complexity="0" loc="381" ncloc="381" packages="5" files="17" classes="17"/>
     <package name="component">
       <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="generate-component.js" path="/Users/jamie/Projects/squid-beak-cli/lib/component/generate-component.js">
@@ -34,9 +34,9 @@
       </file>
     </package>
     <package name="page">
-      <metrics statements="81" coveredstatements="79" conditionals="26" coveredconditionals="25" methods="13" coveredmethods="11"/>
+      <metrics statements="82" coveredstatements="78" conditionals="26" coveredconditionals="25" methods="15" coveredmethods="11"/>
       <file name="generate-page.js" path="/Users/jamie/Projects/squid-beak-cli/lib/page/generate-page.js">
-        <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="22" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -56,8 +56,9 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
       <file name="page-files.js" path="/Users/jamie/Projects/squid-beak-cli/lib/page/page-files.js">
         <metrics statements="47" coveredstatements="47" conditionals="22" coveredconditionals="22" methods="5" coveredmethods="5"/>
@@ -181,26 +182,26 @@
         <line num="8" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
         <line num="32" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
         <line num="42" count="3" type="stmt"/>
         <line num="43" count="3" type="stmt"/>
-        <line num="46" count="3" type="stmt"/>
-        <line num="47" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="50" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="53" count="3" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="48" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="51" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="1" type="stmt"/>
         <line num="54" count="3" type="stmt"/>
         <line num="55" count="3" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
       </file>
       <file name="package-installs.js" path="/Users/jamie/Projects/squid-beak-cli/lib/project/package-installs.js">
         <metrics statements="38" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
@@ -275,7 +276,7 @@
       </file>
     </package>
     <package name="shared">
-      <metrics statements="95" coveredstatements="84" conditionals="18" coveredconditionals="16" methods="19" coveredmethods="10"/>
+      <metrics statements="93" coveredstatements="82" conditionals="18" coveredconditionals="16" methods="19" coveredmethods="10"/>
       <file name="file-templates.js" path="/Users/jamie/Projects/squid-beak-cli/lib/shared/file-templates.js">
         <metrics statements="23" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="10" coveredmethods="1"/>
         <line num="2" count="4" type="stmt"/>
@@ -336,7 +337,7 @@
         <line num="67" count="4" type="stmt"/>
       </file>
       <file name="update.js" path="/Users/jamie/Projects/squid-beak-cli/lib/shared/update.js">
-        <metrics statements="42" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="40" coveredstatements="40" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -356,39 +357,44 @@
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
       </file>
     </package>
     <package name="util">
-      <metrics statements="44" coveredstatements="42" conditionals="6" coveredconditionals="6" methods="12" coveredmethods="4"/>
+      <metrics statements="48" coveredstatements="46" conditionals="6" coveredconditionals="6" methods="13" coveredmethods="5"/>
       <file name="cmd-async.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/cmd-async.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
+      </file>
+      <file name="cwd.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/cwd.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
       <file name="format.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/format.js">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>

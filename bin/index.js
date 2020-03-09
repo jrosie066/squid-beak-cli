@@ -7,7 +7,7 @@ const initiatePage = require('../lib/page/generate-page');
 const logger = require('../lib/util/logger');
 const createComponent = require('../lib/component/generate-component');
 const logSymbols = require('log-symbols');
-const updater = require('../lib/shared/update');
+const remove = require('../lib/util/remove');
 const createStorybookTest = require('../lib/storybook/generate-storybook');
 /**
  * List of potential commands
@@ -44,8 +44,9 @@ program
       .then(msg => {
         logger.info(msg);
       })
-      .catch(err => {
+      .catch(async err => {
         logger.error(err);
+        await remove(`src/pages/${name}`);
         process.exit(1);
       });
   });
@@ -69,8 +70,10 @@ program
       .then((msg) => {
         logger.info(msg);
       })
-      .catch((err) => {
+      .catch(async err => {
         logger.error(err);
+        await remove('name');
+        process.exit(1);
       });
   });
 program
@@ -117,6 +120,7 @@ const log = () => {
 program
   .command('test')
   .action(() => {
-    log();
+    console.log('CWD', process.cwd());
+    console.log('DIR', __dirname);
   });
 program.parse(process.argv);
