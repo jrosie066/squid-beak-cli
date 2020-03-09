@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583743496899" clover="3.2.0">
-  <project timestamp="1583743496899" name="All files">
-    <metrics statements="381" coveredstatements="351" conditionals="70" coveredconditionals="66" methods="68" coveredmethods="46" elements="519" coveredelements="463" complexity="0" loc="381" ncloc="381" packages="5" files="17" classes="17"/>
+<coverage generated="1583793681714" clover="3.2.0">
+  <project timestamp="1583793681714" name="All files">
+    <metrics statements="381" coveredstatements="353" conditionals="70" coveredconditionals="67" methods="68" coveredmethods="48" elements="519" coveredelements="468" complexity="0" loc="381" ncloc="381" packages="5" files="17" classes="17"/>
     <package name="component">
       <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <file name="generate-component.js" path="/Users/jamie/Projects/squid-beak-cli/lib/component/generate-component.js">
@@ -34,9 +34,9 @@
       </file>
     </package>
     <package name="page">
-      <metrics statements="82" coveredstatements="78" conditionals="26" coveredconditionals="25" methods="15" coveredmethods="11"/>
+      <metrics statements="82" coveredstatements="80" conditionals="26" coveredconditionals="26" methods="15" coveredmethods="13"/>
       <file name="generate-page.js" path="/Users/jamie/Projects/squid-beak-cli/lib/page/generate-page.js">
-        <metrics statements="22" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
+        <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -44,20 +44,20 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
       </file>
       <file name="page-files.js" path="/Users/jamie/Projects/squid-beak-cli/lib/page/page-files.js">
@@ -399,16 +399,16 @@
       <file name="format.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/format.js">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="1" count="3" type="stmt"/>
-        <line num="2" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="12" type="cond" truecount="2" falsecount="0"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
         <line num="8" count="3" type="stmt"/>
-        <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="10" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
       </file>
       <file name="logger.js" path="/Users/jamie/Projects/squid-beak-cli/lib/util/logger.js">
