@@ -1,0 +1,62 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "plugins": [
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "mocha": true,
+    "node": true
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.dev.config.js"
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+  },
+  "overrides": [
+    {
+      "files": "**/*.ts",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 10,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "project": "./tsconfig.json"
+      },
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/camelcase": "off",
+        "node/no-missing-import": "off",
+        "node/no-unsupported-features/es-syntax": "off",
+        "node/no-missing-require": "off",
+        "node/shebang": "off",
+        "no-dupe-class-members": "off"
+      }
+    }
+  ]
+}
