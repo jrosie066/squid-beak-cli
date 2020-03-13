@@ -9,13 +9,9 @@ const createComponent = require('../lib/component/generate-component');
 const logSymbols = require('log-symbols');
 const remove = require('../lib/util/remove');
 const createStorybookTest = require('../lib/storybook/generate-storybook');
-/**
- * List of potential commands
- * - generate page
- * - generate component
- * - create project
- * 
- */
+
+program
+  .version('0.1.0');
 // error on unknown commands
 program.on('command:*', function () {
   const errorMsg = `${logSymbols.error} Invalid command: ${program.args.join(' ')}`;
