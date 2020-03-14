@@ -12,18 +12,16 @@ type Props = {
   routes: any;
 };
 
-const Root = ({ /* store, */routes }: Props) => {
-  return (
-    <JssProvider jss={jss}>
-      {/* <ThemeProvider theme={theme}> */}
-        {/* <Provider store={store}> */}
-        <Router>
-          {routes}
-        </Router>
-        {/* </Provider> */}
-      {/* </ThemeProvider> */}
-    </JssProvider>
-  );
-};
+const Root = ({ /* store, */routes }: Props) => (
+  <JssProvider jss={jss}>
+    {/* <ThemeProvider theme={theme}> */}
+    {/* <Provider store={store}> */}
+    <Router>
+      {routes}
+    </Router>
+    {/* </Provider> */}
+    {/* </ThemeProvider> */}
+  </JssProvider>
+);
 
 export { Root };

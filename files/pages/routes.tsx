@@ -1,19 +1,24 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router-dom';
 // import your pages here
 
+import { Sample } from './Sample';
 export const createRoutes = () => {
   return (
     <Switch>
       /* Add your base path page component here */
-      <Route exact path="/" component="" />
+      {/* <Route exact path="/" component="" /> */}
       {
         [
-          {
-            component: '', /* Add your base path page here*/
-            path: '/',
-          },
+          // {
+          //   component: '', /* Add your base path page here*/
+          //   path: '/',
+          // },
           // add other pages in this array
+          {
+            component: Sample,
+            path: '/sample',
+          },
         ].map((settings, index) => (
           < Route exact key={`Route-${index}`} {...settings} />
         ))

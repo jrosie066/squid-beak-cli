@@ -1,5 +1,5 @@
 import { Reducer } from 'redux';
-import { Sample, SampleAction } from '../types';
+import { Sample, SampleAction } from './types';
 
 export const SAMPLE_ACTIONS = {
   ADD_SAMPLE: 'sample/ADD_SAMPLE',
