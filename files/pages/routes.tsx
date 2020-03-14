@@ -2,9 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 // import your pages here
 
-import { Sample } from './Sample';
-export const createRoutes = () => {
-  return (
+export const createRoutes = () => (
     <Switch>
       /* Add your base path page component here */
       {/* <Route exact path="/" component="" /> */}
@@ -15,16 +13,13 @@ export const createRoutes = () => {
           //   path: '/',
           // },
           // add other pages in this array
-          {
-            component: Sample,
-            path: '/sample',
-          },
         ].map((settings, index) => (
-          < Route exact key={`Route-${index}`} {...settings} />
+          // eslint-disable-next-line react/no-array-index-key
+          <Route exact key={`Route-${index}`} {...settings} />
         ))
       }
       {/* TODO: change to Error route */}
       <Redirect from="*" to="/" />
     </Switch>
   );
-};
+  

@@ -12,3 +12,6 @@ webpack.static.config.js
 
 # JEST
 jest.config.js
+
+# SERVICE WORKER
+serviceWorker.js
