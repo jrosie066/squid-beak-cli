@@ -1,4 +1,4 @@
-# ![Squid Beak React CLI](https://github.com/jrosie066/squid-beak-cli/raw/master/dark-squid-logo@2x.png "Kevin")
+# ![Kevin](https://github.com/jrosie066/squid-beak-cli/raw/master/dark-squid-logo@2x.png) Squid Beak React CLI
 
 An easy way to generate new React project, React components and pages through the command line. 
 
