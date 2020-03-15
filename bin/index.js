@@ -6,21 +6,28 @@ const generateProject = require('../lib/project/generate-project');
 const initiatePage = require('../lib/page/generate-page');
 const logger = require('../lib/util/logger');
 const createComponent = require('../lib/component/generate-component');
-const logSymbols = require('log-symbols');
 const remove = require('../lib/util/remove');
 const createStorybookTest = require('../lib/storybook/generate-storybook');
+const { generateItemName } = require('../lib/util/format');
 
+/* SET VERISON */
 program
   .version('0.1.0');
-// error on unknown commands
+
+/**
+ * HANDLE UNKNOWN COMMANDS
+ */
 program.on('command:*', function () {
-  const errorMsg = `${logSymbols.error} Invalid command: ${program.args.join(' ')}`;
+  const errorMsg = `
+  YA DONE MESSED UP AA RON\n
+  "${program.args.join(' ')}" is not a command\n`;
   logger.error(errorMsg);
+  logger.info(' use --help to see commands\n');
   process.exit(1);
 });
 
 /**
- * Generate Page
+ * GENERATE PAGE
  */
 program
   .command('page <name>') // sub-command name
@@ -47,14 +54,16 @@ program
       });
   });
 
-// generate component
+/**
+ * GENERATE COMPONENT
+ * 
+ */
 program
   .command('component <name>')
   .alias('c')
-  .description('Generate React Componenet') // command description
-  // function to execute when command is uses
+  .description('Generate React Componenet')
   .option('-m, --material', 'Use Material UI styles', false)
-  .option('-s, --no-storybook', 'Do no use storybook test', false)
+  .option('-s, --no-storybook', 'Do not use storybook test', false)
   .option('-e, --no-enhancer', 'Do not use enhancer pattern with component', false)
   .action((name, args) => {
     const options = {
@@ -62,16 +71,24 @@ program
       useEnhancer: args.enhancer,
       useStorybook: args.storybook
     };
-    createComponent(name, options)
+    const componentName = generateItemName(name);
+    createComponent(componentName, options)
       .then((msg) => {
         logger.info(msg);
       })
       .catch(async err => {
-        logger.error(err);
-        await remove('name');
+        const { remove: shouldRemove, message } = err;
+        logger.error(message);
+        if (shouldRemove) {
+          await remove(`src/components/${componentName}`);
+        }
         process.exit(1);
       });
   });
+
+/**
+ * GENERATE PROJECT
+ */
 program
   .command('project <projectName>')
   .alias('i')
@@ -86,6 +103,9 @@ program
     }
   });
 
+/**
+ * GENERATE STORYBOOK TEST
+ */
 program
   .command('sb <name>')
   .description('Create new React Component Storybook Test')
