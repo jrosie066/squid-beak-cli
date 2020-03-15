@@ -43,13 +43,14 @@ program
       useWrapper: args.wrapper,
       useEnhancer: args.enhancer,
     };
-    initiatePage(name, options)
+    const formattedPageName = generateItemName(name);
+    initiatePage(formattedPageName, options)
       .then(msg => {
         logger.info(msg);
       })
       .catch(async err => {
         logger.error(err);
-        await remove(`src/pages/${name}`);
+        await remove(`src/pages/${formattedPageName}`);
         process.exit(1);
       });
   });
