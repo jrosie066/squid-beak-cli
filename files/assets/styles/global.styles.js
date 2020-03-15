@@ -29,4 +29,3 @@ const styles = {
 
 jss.createStyleSheet(styles).attach();
 export { jss };
-
