@@ -1,5 +1,5 @@
-![alt text](https://github.com/jrosie066/squid-beak-cli/raw/master/dark-squid-logo@2x.png "Kevin")
-# Squid Beak React CLI
+# ![Squid Beak React CLI](https://github.com/jrosie066/squid-beak-cli/raw/master/dark-squid-logo@2x.png "Kevin")
+
 An easy way to generate new React project, React components and pages through the command line. 
 
 | package     | version |
