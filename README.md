@@ -35,9 +35,88 @@ $ squid-beak [cmd] <params>
 ```
 ## Commands
 
-* [component](#component)
-* [page](#page)
 * [project](project)
+* [component](#component)
+* [page](page)
+* [storybook](storybook)
+
+
+### project
+```sh
+$ squid-beak project my-awesome-component
+```
+**Options**
+The generate project command will prompt you with a serious of questions to select the options to use with the project setup. Will Pascal Case any dashed name given.
+
+1. Pick a Component Library
+  * Material-UI
+  * Ant-Design (future feature)
+  * None
+
+2. Pick an Eslint Style Guide
+  * AirBnb
+  * Alloy
+  * Google (future feature)
+
+3. Do you want to use redux? y/n
+
+4. Do you want to set up Storybook? y/n
+
+5. Do you want to set up a folder structure? y/n
+
+After your selection the folder structure will be generated and configuration and sample files will be added.
+Git will be initiated and it will install all appropriate dependencies.
+
+Here is a sample of the folder structure generated with storybook and redux
+
+```
+├── .storybook
+│   └── main.js
+├── config
+│   ├── jest
+│   │   ├── assetTransformer.js
+│   │   ├── testSetup.js
+│   │   └── testShim.js
+├── scripts
+│   ├── buildApp.js
+│   └── index.js
+├── src
+│   ├── assets
+│   │   ├── images
+│   │   └── styles
+│   │       ├── global.styles.js
+│   │       └── theme.ts
+│   ├── build
+│   │   ├── favicon.ico
+│   │   └── index.html
+│   ├── components
+│   ├── constants
+│   │   └── route-paths.ts
+│   ├── containers
+│   │   └── Root.tsx
+│   ├── index.tsx
+│   ├── pages
+│   │   ├── SamplePage
+│   │   │   ├── component
+│   │   │   │   ├── SamplePage.enhancer.ts
+│   │   │   │   ├── SamplePage.styles.ts
+│   │   │   │   ├── SamplePage.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   └── routes.tsx
+│   ├── redux
+│   │   ├── sample.ts
+│   │   ├── tests
+│   │   └── types.ts
+│   ├── serviceWorker.js
+│   └── util
+├── tsconfig.json
+├── webpack.common.config.js
+├── webpack.dev.config.js
+├── webpack.production.config.js
+└── webpack.static.config.js
+```
+
 
 ### component
 ```sh
@@ -49,7 +128,7 @@ or can use alias
 $ squid-beak c my-awesome-component
 ```
 This will create a new component called MyAwesomeComponent with the following folder structure
-under the "components" folder
+under the "components" folder. Will Pascal Case any dashed name given.
 
 ```
 ├── components
@@ -87,7 +166,8 @@ or can use alias
 ```sh
 $ squid-beak p my-awesome-page
 ```
-This will create a new page called MyAwesomePage with the following folder structure under the "pages" folder
+This will create a new page called MyAwesomePage with the following folder structure under the "pages" folder.
+Will Pascal Case any dashed name given.
 
 ```
 ├── pages
@@ -119,69 +199,16 @@ default: false
 
 default: false
 
-
-### project
+### storybook
 ```sh
-$ squid-beak project my-awesome-component
+$ squid-beak storybook my-awesome-page
 ```
-**Options**
-The generate project command will prompt you with a serious of questions to select the options to use with the project setup.
-1. Pick a Component Library
-  * Material-UI
-  * Ant-Design
-  * None
+or can use alias
 
-2. Eslint Style Guide?
-  * AirBnb
-  * Alloy
-  * Google
-
-3. Do you want to use redux? y/n
-
-4. Do you want to set up Storybook? y/n
-
-After your selection the folder structure will be generated and configuration and sample files will be added.
-Git will be initiated and it will install all appropriate dependencies.
-
-Here is a sample of the folder structure generated with storybook and redux
-
+```sh
+$ squid-beak sb my-awesome-page
 ```
-├── .storybook
-│   └── main.js
-├── config
-│   ├── jest
-│   │   ├── assetTransformer.js
-│   │   ├── testSetup.js
-│   │   └── testShim.js
-├── scripts
-│   ├── buildApp.js
-│   └── index.js
-├── src
-│   ├── assets
-│   │   ├── images
-│   │   └── styles
-│   ├── build
-│   │   └── index.html
-│   ├── components
-│   ├── constants
-│   │   └── route-paths.ts
-│   ├── containers
-│   │   └── Root.tsx
-│   ├── index.tsx
-│   ├── pages
-│   │   └── routes.tsx
-│   ├── redux
-│   │   └── reducers
-│   │       └── sample
-│   │           └── tests
-│   ├── serviceWorker.js
-│   └── util
-├── tsconfig.json
-├── webpack.common.config.js
-├── webpack.dev.config.js
-├── webpack.production.config.js
-└── webpack.static.config.js
-```
+** future feature
 
 # Enhancer
 
@@ -217,10 +244,6 @@ import { enhance } from './MyComponent.enhancer';
 export default enhance(MyComponent);
 
 ```
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 

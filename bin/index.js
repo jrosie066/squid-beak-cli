@@ -108,7 +108,8 @@ program
  * GENERATE STORYBOOK TEST
  */
 program
-  .command('sb <name>')
+  .command('storybook <name>')
+  .alias('sb')
   .description('Create new React Component Storybook Test')
   .action(async (name) => {
     createStorybookTest(name);
