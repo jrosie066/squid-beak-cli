@@ -98,10 +98,9 @@ Here is a sample of the folder structure generated with storybook and redux
 │   ├── pages
 │   │   ├── SamplePage
 │   │   │   ├── component
-│   │   │   │   ├── SamplePage.enhancer.ts
 │   │   │   │   ├── SamplePage.styles.ts
-│   │   │   │   ├── SamplePage.tsx
-│   │   │   │   └── index.ts
+│   │   │   │   └── SamplePage.tsx
+│   │   │   ├── SamplePage.enhancer.ts
 │   │   │   └── index.ts
 │   │   └── routes.tsx
 │   ├── redux
@@ -173,10 +172,9 @@ Will Pascal Case any dashed name given.
 ├── pages
 │   ├── MyAwesomePage
 │   │   ├── component
-│   │   │   ├── MyAwesomePage.enhancer.ts
 │   │   │   ├── MyAwesomePage.styles.ts
-│   │   │   ├── MyAwesomePage.tsx
-│   │   │   └── index.ts
+│   │   │   └── MyAwesomePage.tsx
+│   │   ├── MyAwesomePage.enhancer.ts
 │   │   ├── index.ts
 │   │   └── wrapper
 │   │       └── MyAwesomePageWrapper.tsx
