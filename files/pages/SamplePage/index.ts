@@ -1,3 +1,4 @@
-import SamplePage from './component';
+import { SamplePage } from './component/SamplePage';
+import { enhance } from './SamplePage.enhancer';
 
-export { SamplePage };
+export default enhance(SamplePage);
