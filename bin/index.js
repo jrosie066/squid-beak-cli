@@ -100,7 +100,11 @@ program
       logger.error(`Error! Directory ${projectName} already exists!!! 🤨\n\n`);
       process.exit(1);
     } else {
-      await generateProject(projectName);
+      try {
+        await generateProject(projectName);
+      } catch (err) {
+        await remove(`src/pages/${projectName}`);
+      }
     }
   });
 
