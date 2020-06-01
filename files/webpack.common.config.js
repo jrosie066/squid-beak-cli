@@ -1,10 +1,11 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ConfigWebpackPlugin = require('config-webpack');
 
 const config = () => {
   return {
-    context: resolve(__dirname, ''), // TODO:
+    context: resolve(__dirname, 'src'),
     output: {
       filename: 'bundle.js',
       path: resolve(__dirname, 'dist'),
@@ -40,8 +41,22 @@ const config = () => {
           exclude: /node_modules/,
         },
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          test: /\.mjs$/,
+          include: /node_modules/,
+          type: 'javascript/auto'
+        },
+        {
+          test: /\.less$/,
+          use: [{
+            loader: 'style-loader',
+          }, {
+            loader: 'css-loader', // translates CSS into CommonJS
+          }, {
+            loader: 'less-loader', // compiles Less to CSS
+            options: {
+              javascriptEnabled: true,
+            },
+          }]
         },
         {
           test: /\.(png|jpg|gif)$/,
@@ -53,6 +68,47 @@ const config = () => {
                 mimetype: 'image/png',
                 name: 'images/[name].[ext]',
               },
+            }
+          ]
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.eot(\?v=\d+.\d+.\d+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'fonts/[name].[ext]'
+              }
+            }
+          ]
+        },
+        {
+          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: '8192',
+                mimetype: 'application/font-woff',
+                name: 'fonts/[name].[ext]'
+              }
+            }
+          ]
+        },
+        {
+          test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: '8192',
+                mimetype: 'application/octet-stream',
+                name: 'fonts/[name].[ext]'
+              }
             }
           ]
         },
@@ -73,10 +129,10 @@ const config = () => {
       ]
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
     },
     plugins: [
-      // new CopyWebpackPlugin([{ from: 'build', to: '' }]),
+      new ConfigWebpackPlugin(),
     ],
   };
 };

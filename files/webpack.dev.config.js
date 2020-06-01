@@ -11,7 +11,7 @@ const config = () => {
     entry: [
       'react-hot-loader/patch',
       'webpack/hot/only-dev-server',
-      './src/index.tsx',
+      './index.tsx',
     ],
     devtool: 'cheap-module-eval-source-map',
     devServer: {

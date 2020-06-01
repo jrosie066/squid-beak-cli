@@ -1,20 +1,22 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzePlugin } = require('webpack-bundle-analyzer');
 const { resolve } = require('path');
 
-const common = requre('./webpack.common.config');
+const common = require('./webpack.common.config');
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
-const buildHash = process.env.BUILD_HASH || 'bruh';
-
+const date = Date.now()
+const buildHash = process.env.BUILD_HASH || date;
+console.log(common);
 const config = () => {
 
   return {
     bail: true,
     mode: 'production',
-    devtools: shouldUseSourceMap ? 'source-map' : false,
+    // devtool: shouldUseSourceMap ? 'source-map' : false,
+    devtool: false,
     entry: [
-      './src/index.ts'
+      './index.tsx'
     ],
     module: {
       ...common().module || {},
@@ -28,14 +30,14 @@ const config = () => {
     optimization: {
       ...common().optimization || {},
       splitChunks: {
-        chunk: 'all',
+        chunks: 'all',
         minSize: 300000,
         maxSize: 600000,
       },
     },
     performance: {
       maxAssetSize: 1000000,
-      maxEntryPointSize: 1000000,
+      maxEntrypointSize: 1000000,
       hints: 'warning',
     },
     plugins: [
@@ -43,7 +45,7 @@ const config = () => {
       ...common.plugins || [],
       new HtmlWebpackPlugin({
         inject: true,
-        template: resolve(__dirname, 'src/build/index.hmtl'),
+        template: resolve(__dirname, 'src/build/index.html'),
         minify: {
           removeComments: true,
           collapseWhitespace: true,
@@ -91,11 +93,11 @@ const getAnalyzerPlugin = () => {
 
 module.exports = () => {
   const conf = config();
-  if(analyze){
-    conf.plugins.push(getAnalyzerPlugin());
-  }
+  // if (analyze) {
+  //   conf.plugins.push(getAnalyzerPlugin());
+  // }
   return {
-    ...common,
+    ...common(),
     ...conf
   };
 }

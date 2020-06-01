@@ -1,8 +1,10 @@
 module.exports = {
   verbose: true,
   transform: {
+    '^.+\\.(ts|js|html|tsx)$': 'ts-jest',
     '^.+\\.(ts)?$': 'babel-jest',
-    '^.+\\.(ts|js|html)$': 'ts-jest',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': './config/jest/assetsTransformer.js',
+    
   },
   setupFiles: [
     './config/jest/assetsTransformer.js',
@@ -10,16 +12,13 @@ module.exports = {
     './config/jest/testShim.js',
   ],
   globals: {
-    "ts-jest": {
-      "tsConfig": '<rootDir>/tsconfig.json',
+    'ts-jest': {
+      'tsConfig': './tsconfig.json',
       allowJs: true,
     }
   },
-  moduleFileExtensions: ['tsx', 'ts', 'js', 'jsx'],
+  moduleFileExtensions: ['tsx', 'ts', 'js'],
   preset: 'ts-jest',
   testEnvironment: 'node',
-  moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/config/jest/assetsTransformer.js',
-  },
-  testEnvironment: 'node',
+  coveragePathIgnorePatterns: ['/node_modules', '/*/*.test.tsx']
 };
