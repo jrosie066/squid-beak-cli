@@ -5,7 +5,7 @@
   "homepage": "https://github.com/jrosie066/squid-beak-cli",
   "author": {
     "name": "Jamie Artin",
-    "email": "artin@uwalumni.com",
+    "email": "artin@uwalumni.com"
   },
   "preferGlobal": true,
   "scripts": {
@@ -15,7 +15,6 @@
     "squid-beak": "bin/index.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.7.2",
