@@ -1,7 +1,12 @@
 {
   "name": "squid-beak-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "awesome react cli",
+  "homepage": "https://github.com/jrosie066/squid-beak-cli",
+  "author": {
+    "name": "Jamie Artin",
+    "email": "artin@uwalumni.com",
+  },
   "preferGlobal": true,
   "scripts": {
     "test": "npx jest --coverage"
