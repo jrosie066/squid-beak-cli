@@ -5,7 +5,7 @@ const pathExists = require('path-exists');
 const generateProject = require('../lib/project/generate-project');
 const initiatePage = require('../lib/page/generate-page');
 const logger = require('../lib/util/logger');
-const createComponent = require('../lib/component/generate-component');
+const { createComponent } = require('../lib/component/generate-component');
 const remove = require('../lib/util/remove');
 const createStorybookTest = require('../lib/storybook/generate-storybook');
 const { generateItemName } = require('../lib/util/format');
@@ -36,13 +36,14 @@ program
   .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
   .option('-e, --no-enhancer', 'Do not use enhancer pattern')
   .option('-m, --material', 'Use material-ui styling on page', false)
-  .option('-p, --path', 'Path where you want to add the page')
+  .option('-p, --path <path>', 'Path where you want to add the page')
   // function to execute when command is uses
   .action(function (name, args) {
     const options = {
       useMaterial: args.material,
       useWrapper: args.wrapper,
       useEnhancer: args.enhancer,
+      newPath: args.path,
     };
     const formattedPageName = generateItemName(name);
     initiatePage(formattedPageName, options)
@@ -67,12 +68,13 @@ program
   .option('-m, --material', 'Use Material UI styles', false)
   .option('-s, --no-storybook', 'Do not use storybook test', false)
   .option('-e, --no-enhancer', 'Do not use enhancer pattern with component', false)
-  .option('-p, --path', 'Path where you want to add the component')
+  .option('-p, --path <path>', 'Path where you want to add the component')
   .action((name, args) => {
     const options = {
       useMaterial: args.material,
       useEnhancer: args.enhancer,
-      useStorybook: args.storybook
+      useStorybook: args.storybook,
+      newPath: args.path,
     };
     const componentName = generateItemName(name);
     createComponent(componentName, options)
