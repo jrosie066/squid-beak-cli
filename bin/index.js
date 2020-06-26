@@ -36,6 +36,7 @@ program
   .option('-w, --no-wrapper', 'Do not use wrapper pattern with page')
   .option('-e, --no-enhancer', 'Do not use enhancer pattern')
   .option('-m, --material', 'Use material-ui styling on page', false)
+  .option('-p, --path', 'Path where you want to add the page')
   // function to execute when command is uses
   .action(function (name, args) {
     const options = {
@@ -66,6 +67,7 @@ program
   .option('-m, --material', 'Use Material UI styles', false)
   .option('-s, --no-storybook', 'Do not use storybook test', false)
   .option('-e, --no-enhancer', 'Do not use enhancer pattern with component', false)
+  .option('-p, --path', 'Path where you want to add the component')
   .action((name, args) => {
     const options = {
       useMaterial: args.material,
