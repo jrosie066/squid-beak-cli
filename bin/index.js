@@ -62,7 +62,6 @@ program
 
 /**
  * GENERATE COMPONENT
- * 
  */
 program
   .command('component <name>')
