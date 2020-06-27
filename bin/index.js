@@ -51,8 +51,11 @@ program
         logger.info(msg);
       })
       .catch(async err => {
-        logger.error(err);
-        await remove(`src/pages/${formattedPageName}`);
+        const { remove: shouldRemove, message } = err;
+        logger.error(message);
+        if (shouldRemove) {
+          await remove(`src/components/${formattedPageName}`);
+        }
         process.exit(1);
       });
   });

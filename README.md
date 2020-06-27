@@ -143,6 +143,9 @@ default: false
 
 default: false
 
+`--path` or `-p` - change what path to create the component in
+
+default: src/components
 
 ### page
 ```sh
@@ -184,6 +187,10 @@ default: false
 `--no-wrapper` or `-w` - don't use the higher order component/"wrapper" for the page
 
 default: false
+
+`--path` or `-p` - change what path to create the page in
+
+default: src/page
 
 ### storybook
 ```sh
