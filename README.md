@@ -43,7 +43,7 @@ The generate project command will prompt you with a serious of questions to sele
 
 2. Pick an Eslint Style Guide
   * AirBnb
-  * Alloy
+  * Alloy (future feature)
   * Google (future feature)
 
 3. Do you want to use redux? y/n
@@ -55,7 +55,10 @@ The generate project command will prompt you with a serious of questions to sele
 After your selection the folder structure will be generated and configuration and sample files will be added.
 Git will be initiated and it will install all appropriate dependencies.
 
+** currently Material-UI and AirBnb are the only ones really working well the others get close but more work is needed
+
 Here is a sample of the folder structure generated with storybook and redux
+
 
 ```
 ├── .storybook
