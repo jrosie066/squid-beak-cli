@@ -41,24 +41,6 @@ const config = () => {
           exclude: /node_modules/,
         },
         {
-          test: /\.mjs$/,
-          include: /node_modules/,
-          type: 'javascript/auto'
-        },
-        {
-          test: /\.less$/,
-          use: [{
-            loader: 'style-loader',
-          }, {
-            loader: 'css-loader', // translates CSS into CommonJS
-          }, {
-            loader: 'less-loader', // compiles Less to CSS
-            options: {
-              javascriptEnabled: true,
-            },
-          }]
-        },
-        {
           test: /\.(png|jpg|gif)$/,
           use: [
             {
@@ -129,7 +111,7 @@ const config = () => {
       ]
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     plugins: [
       new ConfigWebpackPlugin(),

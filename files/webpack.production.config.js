@@ -7,9 +7,7 @@ const common = require('./webpack.common.config');
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 const date = Date.now()
 const buildHash = process.env.BUILD_HASH || date;
-console.log(common);
 const config = () => {
-
   return {
     bail: true,
     mode: 'production',
@@ -41,8 +39,8 @@ const config = () => {
       hints: 'warning',
     },
     plugins: [
+      ...common().plugins || [],
       new CleanWebpackPlugin(),
-      ...common.plugins || [],
       new HtmlWebpackPlugin({
         inject: true,
         template: resolve(__dirname, 'src/build/index.html'),
