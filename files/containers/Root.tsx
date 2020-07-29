@@ -7,7 +7,7 @@ import { jss } from '../assets/styles/global.styles';
 // import { theme } from '../assets/styles/theme';
 
 type Props = {
-  store: any;
+  // store: any;
   routes: any;
 };
 
